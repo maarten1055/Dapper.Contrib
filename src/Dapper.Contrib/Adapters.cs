@@ -568,12 +568,12 @@ namespace Dapper.Contrib
         }
 
         /// <summary>
-        /// Get column with correct notation. Extra '?' because Dapper Trims the first '?'
+        /// Get column with correct notation.
         /// </summary>
         /// <param name="columnName">The column name.</param>
         public string GetColumnWithNotation(string columnName)
         {
-            return String.Format("??{0}?", columnName);
+            return String.Format("?{0}?", columnName);
         }
 
         /// <summary>

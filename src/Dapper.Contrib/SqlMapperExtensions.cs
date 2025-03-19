@@ -186,7 +186,9 @@ namespace Dapper.Contrib.Extensions
 
             var dynParams = new DynamicParameters();
             //sbParameterList.AppendFormat("@{0}", property.Name);
-            dynParams.Add(idParameter, id);
+            
+            //Extra '?' because Dapper Trims the first '?'
+            dynParams.Add(string.Format("?{0}", idParameter), id);
 
             T obj;
 
